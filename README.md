@@ -12,5 +12,6 @@ import '@feizheng/next-require';
 
 //DOCS here!
 ```
-## todos
-- [ ] @scope/next-package
+## resources
+- https://github.com/jackfranklin/gulp-load-plugins
+
