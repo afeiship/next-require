@@ -10,8 +10,10 @@ npm install -S @feizheng/next-require
 ```js
 import '@feizheng/next-require';
 
-//DOCS here!
+// load @feizheng/next-packages defaults.
+nx.require();
 ```
+
 ## resources
 - https://github.com/jackfranklin/gulp-load-plugins
 
