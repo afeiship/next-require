@@ -2,8 +2,8 @@
  * name: @jswork/next-require
  * description: Require multiple package.
  * homepage: https://github.com/afeiship/next-require
- * version: 1.0.0
- * date: 2020-11-21 13:11:24
+ * version: 1.0.1
+ * date: 2020-11-21 13:12:09
  * license: MIT
  */
 
