@@ -44,5 +44,10 @@
     "findup-sync": "^4.0.0",
     "micromatch": "^4.0.2",
     "resolve": "^1.19.0"
-  }
+  },
+  "keywords": [
+    "next",
+    "require",
+    "load"
+  ]
 }

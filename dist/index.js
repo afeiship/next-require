@@ -3,7 +3,7 @@
  * description: Require multiple package.
  * homepage: https://github.com/afeiship/next-require
  * version: 1.0.0
- * date: 2020-11-21 10:18:53
+ * date: 2020-11-21 10:20:31
  * license: MIT
  */
 
