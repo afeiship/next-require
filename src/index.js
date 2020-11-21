@@ -11,6 +11,7 @@
   var SCOPE_DECOMPOSITION_RE = new RegExp('^@(.+)/(.+)');
   var DEFAULT_RENAME_RE = /^next(-|\.)/;
   var DEFAULT_OPTIONS = {
+    context: nx,
     config: findup('package.json', { cwd: parentDir }),
     pattern: ['@jswork/next-*', '!@jswork/next-require'],
     scope: ['dependencies', 'devDependencies'],
@@ -30,7 +31,7 @@
   nx.require = function (inOptions) {
     var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
     var pattern = options.pattern;
-    var finalObject = {};
+    var finalObject = options.context || {};
     var scope = options.scope;
     var config = options.config;
     var requireFn =
