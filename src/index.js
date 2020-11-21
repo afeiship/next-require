@@ -58,7 +58,7 @@
     });
 
     system.forEach(function (sys) {
-      finalObject.$system[sys] = require(sys);
+      nx.set(finalObject, '$system.' + sys, require(sys));
     });
 
     return finalObject;

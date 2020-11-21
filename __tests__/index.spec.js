@@ -13,8 +13,13 @@
       nx.require({
         pattern: ['@jswork/next-*', '!@jswork/next-require', 'resolve']
       });
-
       expect(nx.resolve === resolve).toBe(true);
     });
+
+    test('nx.require support system fs module',()=>{
+      nx.require();
+      expect(typeof nx.$system.fs).toBe('object');
+      expect(typeof nx.$system.fs.writeFileSync).toBe('function');
+    })
   });
 })();
