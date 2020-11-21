@@ -3,7 +3,7 @@
  * description: Require multiple package.
  * homepage: https://github.com/afeiship/next-require
  * version: 1.0.2
- * date: 2020-11-21 14:42:43
+ * date: 2020-11-21 14:46:30
  * license: MIT
  */
 
@@ -67,7 +67,7 @@
     });
 
     system.forEach(function (sys) {
-      finalObject.$system = require(sys);
+      finalObject.$system[sys] = require(sys);
     });
 
     return finalObject;
