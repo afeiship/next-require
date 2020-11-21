@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-require",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Require multiple package.",
   "homepage": "https://github.com/afeiship/next-require",
   "author": {
@@ -48,6 +48,7 @@
   "keywords": [
     "next",
     "require",
-    "load"
+    "load",
+    "multiple"
   ]
 }
