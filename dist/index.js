@@ -3,7 +3,7 @@
  * description: Require multiple package.
  * homepage: https://github.com/afeiship/next-require
  * version: 1.0.1
- * date: 2020-11-21 13:12:09
+ * date: 2020-11-21 14:41:53
  * license: MIT
  */
 
@@ -21,6 +21,7 @@
   var DEFAULT_RENAME_RE = /^next(-|\.)/;
   var DEFAULT_OPTIONS = {
     context: nx,
+    system: ['fs', 'path'],
     config: findup('package.json', { cwd: parentDir }),
     pattern: ['@jswork/next-*', '!@jswork/next-require'],
     scope: ['dependencies', 'devDependencies'],
@@ -40,6 +41,7 @@
   nx.require = function (inOptions) {
     var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
     var pattern = options.pattern;
+    var system = options.system;
     var finalObject = options.context || {};
     var scope = options.scope;
     var config = options.config;
@@ -62,6 +64,10 @@
       var targetName = SCOPE_RE.test(name) ? SCOPE_DECOMPOSITION_RE.exec(name)[2] : name;
       var libName = options.rename(targetName);
       finalObject[libName] = options.transform(libName, requireFn(name));
+    });
+
+    system.forEach(function (sys) {
+      finalObject.$system = require(sys);
     });
 
     return finalObject;
