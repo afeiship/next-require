@@ -1,3 +1,3 @@
 interface NxStatic {
-  require: (inOptions) => void;
+  // your codes goes here.
 }
