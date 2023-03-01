@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-require",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Require multiple package.",
   "homepage": "https://js.work",
   "author": {
@@ -52,5 +52,11 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  }
+  },
+  "keywords": [
+    "next",
+    "require",
+    "load",
+    "multiple"
+  ]
 }
